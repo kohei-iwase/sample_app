@@ -7,6 +7,7 @@ def fizz_buzz(number)
 		'Buzz'
 	else
 		number.tos
+	end
 end
 
 puts "1以上の数字を入力してください"
