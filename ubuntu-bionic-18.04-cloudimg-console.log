@@ -597,4 +597,958 @@ Welcome to [1mUbuntu 18.04.3 LTS[0m!
 
 Ubuntu 18.04.3 LTS ubuntu-bionic ttyS0
 
-ubuntu-bionic login: 
+ubuntu-bionic login: [53075.089317] e1000 0000:00:03.0 enp0s3: Detected Tx Unit Hang
+[53075.089317]   Tx Queue             <0>
+[53075.089317]   TDH                  <26>
+[53075.089317]   TDT                  <2b>
+[53075.089317]   next_to_use          <2b>
+[53075.089317]   next_to_clean        <26>
+[53075.089317] buffer_info[next_to_clean]
+[53075.089317]   time_stamp           <100c95758>
+[53075.089317]   next_to_watch        <2a>
+[53075.089317]   jiffies              <100c95ada>
+[53075.089317]   next_to_watch.status <0>
+[53077.128459] e1000 0000:00:03.0 enp0s3: Detected Tx Unit Hang
+[53077.128459]   Tx Queue             <0>
+[53077.128459]   TDH                  <26>
+[53077.128459]   TDT                  <2b>
+[53077.128459]   next_to_use          <2b>
+[53077.128459]   next_to_clean        <26>
+[53077.128459] buffer_info[next_to_clean]
+[53077.128459]   time_stamp           <100c95758>
+[53077.128459]   next_to_watch        <2a>
+[53077.128459]   jiffies              <100c95cd8>
+[53077.128459]   next_to_watch.status <0>
+[53078.173230] e1000 0000:00:03.0 enp0s3: Reset adapter
+[208242.684623] general protection fault: 0000 [#1] SMP PTI
+[208242.687792] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208242.699895] CPU: 1 PID: 24778 Comm: git Tainted: G        W        4.15.0-74-generic #84-Ubuntu
+[208242.701953] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208242.704299] RIP: 0010:__kmalloc+0xc9/0x220
+[208242.705175] RSP: 0018:ffffa95501a7fd88 EFLAGS: 00010206
+[208242.706287] RAX: 0000000000000000 RBX: 14353c1a50d740d4 RCX: 00000000001dc14e
+[208242.707941] RDX: 00000000001dc14d RSI: 0000000000000000 RDI: 00000000000260a0
+[208242.710167] RBP: ffffa95501a7fdb8 R08: ffff94243b2de380 R09: ffff94243e003800
+[208242.711899] R10: 0000000000000000 R11: ebcaa83e6bfaa354 R12: ffff94243b2de380
+[208242.713732] R13: 00000000014000c0 R14: 0000000000000033 R15: ffff94243e003800
+[208242.715273] FS:  00007f9c35ad8080(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208242.717024] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208242.718291] CR2: 00005627473fe360 CR3: 000000000164c004 CR4: 00000000000606e0
+[208242.719838] Call Trace:
+[208242.720431]  ? inotify_handle_event+0x6d/0x150
+[208242.721405]  inotify_handle_event+0x6d/0x150
+[208242.722359]  fsnotify+0x183/0x4e0
+[208242.723108]  vfs_mkdir+0x167/0x1c0
+[208242.723873]  SyS_mkdir+0xe7/0x110
+[208242.724624]  do_syscall_64+0x73/0x130
+[208242.725447]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208242.726532] RIP: 0033:0x7f9c34d26bb7
+[208242.727336] RSP: 002b:00007ffd8f1d8a18 EFLAGS: 00000216 ORIG_RAX: 0000000000000053
+[208242.728949] RAX: ffffffffffffffda RBX: 00005627473bebd0 RCX: 00007f9c34d26bb7
+[208242.730501] RDX: 0000562746417b84 RSI: 00000000000001ff RDI: 00005627473beb80
+[208242.732023] RBP: 0000000000000010 R08: 00007ffd8f1f3000 R09: 0001308c66d21986
+[208242.733809] R10: 0000000000000124 R11: 0000000000000216 R12: 00005627473beb30
+[208242.735336] R13: 00007f9c35ad8000 R14: 0000562746417b84 R15: 00007ffd8f1da4d0
+[208242.736867] Code: 4d 01 e0 4d 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 0f 94 c0 84 c0 74 ac 4d 39 d8 74 14 49 63 41 20 48 01 c3 <48> 33 1b 49 33 99 40 01 00 00 0f 18 0b 41 f7 c5 00 80 00 00 0f 
+[208242.740768] RIP: __kmalloc+0xc9/0x220 RSP: ffffa95501a7fd88
+[208242.742050] ---[ end trace 3d3d39fbfadcb933 ]---
+[208242.743635] general protection fault: 0000 [#2] SMP PTI
+[208242.745286] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208242.757609] CPU: 1 PID: 24778 Comm: git Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208242.759475] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208242.761213] RIP: 0010:__kmalloc+0xa1/0x220
+[208242.762125] RSP: 0018:ffffa95501a7fcb8 EFLAGS: 00010206
+[208242.763236] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[208242.764761] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[208242.766406] RBP: ffffa95501a7fce8 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[208242.767952] R10: ffff94243abed7c0 R11: ffff94243b709910 R12: 14353c1a50d740d4
+[208242.769486] R13: 00000000014000c0 R14: 000000000000003b R15: ffff94243e003800
+[208242.771029] FS:  00007f9c35ad8080(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208242.772741] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208242.773985] CR2: 00005627473fe360 CR3: 000000000500a005 CR4: 00000000000606e0
+[208242.775508] Call Trace:
+[208242.776096]  ? inotify_handle_event+0x6d/0x150
+[208242.777071]  inotify_handle_event+0x6d/0x150
+[208242.778028]  fsnotify+0x183/0x4e0
+[208242.778782]  __fsnotify_parent+0xda/0x130
+[208242.779685]  __fput+0x80/0x220
+[208242.780413]  ____fput+0xe/0x10
+[208242.781117]  task_work_run+0x9d/0xc0
+[208242.781950]  do_exit+0x2f7/0xbc0
+[208242.782691]  rewind_stack_do_exit+0x17/0x20
+[208242.783616] RIP: 0033:0x7f9c34d26bb7
+[208242.784424] RSP: 002b:00007ffd8f1d8a18 EFLAGS: 00000216 ORIG_RAX: 0000000000000053
+[208242.786062] RAX: ffffffffffffffda RBX: 00005627473bebd0 RCX: 00007f9c34d26bb7
+[208242.787610] RDX: 0000562746417b84 RSI: 00000000000001ff RDI: 00005627473beb80
+[208242.789151] RBP: 0000000000000010 R08: 00007ffd8f1f3000 R09: 0001308c66d21986
+[208242.790717] R10: 0000000000000124 R11: 0000000000000216 R12: 00005627473beb30
+[208242.792253] R13: 00007f9c35ad8000 R14: 0000562746417b84 R15: 00007ffd8f1da4d0
+[208242.793819] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[208242.797739] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95501a7fcb8
+[208242.799758] ---[ end trace 3d3d39fbfadcb934 ]---
+[208242.800918] Fixing recursive fault but reboot is needed!
+[208244.137970] general protection fault: 0000 [#3] SMP PTI
+[208244.140439] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208244.153413] CPU: 1 PID: 1103 Comm: vmstats Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208244.155711] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208244.158194] RIP: 0010:__kmalloc+0xa1/0x220
+[208244.159612] RSP: 0018:ffffa95500643d58 EFLAGS: 00010206
+[208244.161394] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[208244.163625] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[208244.165309] RBP: ffffa95500643d88 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[208244.167040] R10: ffffffffffffffea R11: 0000000000000000 R12: 14353c1a50d740d4
+[208244.168664] R13: 00000000014002c0 R14: 0000000000000030 R15: ffff94243e003800
+[208244.170519] FS:  00007f77eef39700(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208244.172996] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208244.174458] CR2: 00007f91c1eb7010 CR3: 000000003a5d0002 CR4: 00000000000606e0
+[208244.175958] Call Trace:
+[208244.176547]  ? rtR0MemAllocEx+0x18b/0x220 [vboxguest]
+[208244.178167]  rtR0MemAllocEx+0x18b/0x220 [vboxguest]
+[208244.179422]  VBoxGuest_RTMemAllocTag+0x27/0x60 [vboxguest]
+[208244.180607]  vgdrvLinuxIOCtl+0xc1/0x290 [vboxguest]
+[208244.181657]  do_vfs_ioctl+0xa8/0x630
+[208244.182449]  ? SyS_futex+0x13b/0x180
+[208244.183239]  SyS_ioctl+0x79/0x90
+[208244.183975]  do_syscall_64+0x73/0x130
+[208244.184792]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208244.185898] RIP: 0033:0x7f77f02d75d7
+[208244.187002] RSP: 002b:00007f77eef38d38 EFLAGS: 00000246 ORIG_RAX: 0000000000000010
+[208244.188624] RAX: ffffffffffffffda RBX: 00007f77eef38d70 RCX: 00007f77f02d75d7
+[208244.190146] RDX: 00007f77eef38d70 RSI: 00000000c020560a RDI: 0000000000000003
+[208244.191665] RBP: 00007f77eef38d40 R08: 0000000000000000 R09: 0000000000000000
+[208244.193193] R10: 00007f77eef38d60 R11: 0000000000000246 R12: 000055af37ff5e40
+[208244.194729] R13: 00007f77eef38dbc R14: 000055af38235cd0 R15: 00007ffcd32ec990
+[208244.196288] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[208244.200300] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95500643d58
+[208244.201514] ---[ end trace 3d3d39fbfadcb935 ]---
+[208245.588852] general protection fault: 0000 [#4] SMP PTI
+[208245.591381] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208245.603526] CPU: 1 PID: 1099 Comm: timesync Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208245.605780] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208245.607650] RIP: 0010:__kmalloc+0xa1/0x220
+[208245.608612] RSP: 0018:ffffa95500ce3d58 EFLAGS: 00010206
+[208245.609792] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[208245.611398] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[208245.612930] RBP: ffffa95500ce3d88 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[208245.614466] R10: ffffffffffffffea R11: 0000000000000000 R12: 14353c1a50d740d4
+[208245.616000] R13: 00000000014002c0 R14: 0000000000000030 R15: ffff94243e003800
+[208245.617567] FS:  00007f77ef13d700(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208245.619296] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208245.620529] CR2: 00007f91c1eb7010 CR3: 000000003a5d0002 CR4: 00000000000606e0
+[208245.622061] Call Trace:
+[208245.622666]  ? rtR0MemAllocEx+0x18b/0x220 [vboxguest]
+[208245.623765]  rtR0MemAllocEx+0x18b/0x220 [vboxguest]
+[208245.624822]  VBoxGuest_RTMemAllocTag+0x27/0x60 [vboxguest]
+[208245.625994]  vgdrvLinuxIOCtl+0xc1/0x290 [vboxguest]
+[208245.627054]  do_vfs_ioctl+0xa8/0x630
+[208245.627870]  ? SyS_futex+0x13b/0x180
+[208245.628683]  SyS_ioctl+0x79/0x90
+[208245.629432]  do_syscall_64+0x73/0x130
+[208245.630253]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208245.631361] RIP: 0033:0x7f77f02d75d7
+[208245.632161] RSP: 002b:00007f77ef13cbe8 EFLAGS: 00000246 ORIG_RAX: 0000000000000010
+[208245.633775] RAX: ffffffffffffffda RBX: 00007f77ef13cc20 RCX: 00007f77f02d75d7
+[208245.635310] RDX: 00007f77ef13cc20 RSI: 00000000c0205602 RDI: 0000000000000003
+[208245.636870] RBP: 00007f77ef13cbf0 R08: 0000000000000000 R09: 0000000000000000
+[208245.638409] R10: 00007f77ef13cc10 R11: 0000000000000246 R12: 00007f77ef13ccd0
+[208245.639953] R13: 00007f77ef13ccd8 R14: 00007f77ef13ccc8 R15: 000055af37ff2049
+[208245.641488] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[208245.645424] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95500ce3d58
+[208245.646928] ---[ end trace 3d3d39fbfadcb936 ]---
+[208247.317764] general protection fault: 0000 [#5] SMP PTI
+[208247.320218] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208247.332854] CPU: 1 PID: 1102 Comm: memballoon Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208247.335176] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208247.337153] RIP: 0010:__kmalloc+0xa1/0x220
+[208247.338329] RSP: 0018:ffffa95500577d58 EFLAGS: 00010206
+[208247.339557] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[208247.341234] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[208247.342837] RBP: ffffa95500577d88 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[208247.344401] R10: ffffffffffffffea R11: 0000000000000000 R12: 14353c1a50d740d4
+[208247.345927] R13: 00000000014002c0 R14: 0000000000000030 R15: ffff94243e003800
+[208247.347458] FS:  00007f77eefba700(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208247.349172] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208247.350383] CR2: 00007f91c1eb7010 CR3: 000000003a5d0002 CR4: 00000000000606e0
+[208247.351913] Call Trace:
+[208247.352511]  ? rtR0MemAllocEx+0x18b/0x220 [vboxguest]
+[208247.353604]  rtR0MemAllocEx+0x18b/0x220 [vboxguest]
+[208247.354656]  VBoxGuest_RTMemAllocTag+0x27/0x60 [vboxguest]
+[208247.355829]  vgdrvLinuxIOCtl+0xc1/0x290 [vboxguest]
+[208247.356879]  do_vfs_ioctl+0xa8/0x630
+[208247.357686]  ? SyS_futex+0x13b/0x180
+[208247.358495]  SyS_ioctl+0x79/0x90
+[208247.359226]  do_syscall_64+0x73/0x130
+[208247.360045]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208247.361153] RIP: 0033:0x7f77f02d75d7
+[208247.361950] RSP: 002b:00007f77eefb9d28 EFLAGS: 00000246 ORIG_RAX: 0000000000000010
+[208247.363544] RAX: ffffffffffffffda RBX: 00007f77eefb9d60 RCX: 00007f77f02d75d7
+[208247.365070] RDX: 00007f77eefb9d60 RSI: 00000000c020560a RDI: 0000000000000003
+[208247.366591] RBP: 00007f77eefb9d30 R08: 0000000000000000 R09: 0000000000000000
+[208247.368118] R10: 00007f77eefb9d50 R11: 0000000000000246 R12: 00007f77eefb9da8
+[208247.369660] R13: 00007f77eefb9dac R14: 00007f77eefb9da7 R15: 000055af37d8f769
+[208247.371192] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[208247.375026] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95500577d58
+[208247.376271] ---[ end trace 3d3d39fbfadcb937 ]---
+[208284.627507] general protection fault: 0000 [#6] SMP PTI
+[208284.629597] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208284.642817] CPU: 1 PID: 423 Comm: systemd-udevd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208284.645062] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208284.647078] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208284.648318] RSP: 0018:ffffa95500407df8 EFLAGS: 00010206
+[208284.649651] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208284.651303] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208284.652907] RBP: ffffa95500407e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[208284.654706] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[208284.656616] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208284.658235] FS:  00007f99443f0680(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208284.659972] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208284.661742] CR2: 00007fd698012058 CR3: 000000003ae34004 CR4: 00000000000606e0
+[208284.664455] Call Trace:
+[208284.665159]  ? sock_alloc_inode+0x3b/0xc0
+[208284.666377]  sock_alloc_inode+0x3b/0xc0
+[208284.667346]  alloc_inode+0x20/0x90
+[208284.668559]  new_inode_pseudo+0x11/0x60
+[208284.669642]  sock_alloc+0x1c/0x80
+[208284.670847]  __sock_create+0x80/0x200
+[208284.672844]  SyS_socket+0x55/0x90
+[208284.673905]  do_syscall_64+0x73/0x130
+[208284.674708]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208284.676428] RIP: 0033:0x7f9943f09ec7
+[208284.677775] RSP: 002b:00007fffbad06908 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208284.679707] RAX: ffffffffffffffda RBX: 00005639cd7b7105 RCX: 00007f9943f09ec7
+[208284.682007] RDX: 0000000000000000 RSI: 0000000000080002 RDI: 0000000000000001
+[208284.683836] RBP: 00007fffbad06a10 R08: 0000003080e5be06 R09: 0001309c1ae4c8c6
+[208284.686114] R10: 00007fffbad069d0 R11: 0000000000000246 R12: 00007fffbad06960
+[208284.687630] R13: 00007fffbad06ad0 R14: 00007fffbad07ef6 R15: 0000000000000001
+[208284.689538] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208284.693319] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95500407df8
+[208284.695314] ---[ end trace 3d3d39fbfadcb938 ]---
+[208284.717695] general protection fault: 0000 [#7] SMP PTI
+[208284.719637] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208284.732845] CPU: 1 PID: 423 Comm: systemd-udevd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208284.736249] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208284.739100] RIP: 0010:__kmalloc+0xa1/0x220
+[208284.740432] RSP: 0018:ffffa95500407c98 EFLAGS: 00010206
+[208284.742307] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[208284.745428] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[208284.748041] RBP: ffffa95500407cc8 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[208284.752212] R10: ffff94243d7d4720 R11: ffff94243d0ad610 R12: 14353c1a50d740d4
+[208284.757766] R13: 00000000014000c0 R14: 0000000000000030 R15: ffff94243e003800
+[208284.760618] FS:  00007f99443f0680(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208284.763312] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208284.765004] CR2: 00007fd698012058 CR3: 000000000500a006 CR4: 00000000000606e0
+[208284.767462] Call Trace:
+[208284.768408]  ? inotify_handle_event+0x6d/0x150
+[208284.770494]  inotify_handle_event+0x6d/0x150
+[208284.771789]  inotify_ignored_and_remove_idr+0x32/0x60
+[208284.774082]  inotify_freeing_mark+0xe/0x10
+[208284.775596]  fsnotify_free_mark+0x50/0x70
+[208284.776788]  fsnotify_clear_marks_by_group+0x68/0x130
+[208284.778795]  fsnotify_destroy_group+0x34/0xd0
+[208284.780506]  inotify_release+0x1e/0x50
+[208284.781679]  __fput+0xea/0x220
+[208284.783015]  ____fput+0xe/0x10
+[208284.784425]  task_work_run+0x9d/0xc0
+[208284.785935]  do_exit+0x2f7/0xbc0
+[208284.787208]  ? SyS_socket+0x55/0x90
+[208284.788344]  rewind_stack_do_exit+0x17/0x20
+[208284.789634] RIP: 0033:0x7f9943f09ec7
+[208284.790427] RSP: 002b:00007fffbad06908 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208284.792035] RAX: ffffffffffffffda RBX: 00005639cd7b7105 RCX: 00007f9943f09ec7
+[208284.793699] RDX: 0000000000000000 RSI: 0000000000080002 RDI: 0000000000000001
+[208284.795812] RBP: 00007fffbad06a10 R08: 0000003080e5be06 R09: 0001309c1ae4c8c6
+[208284.797984] R10: 00007fffbad069d0 R11: 0000000000000246 R12: 00007fffbad06960
+[208284.799782] R13: 00007fffbad06ad0 R14: 00007fffbad07ef6 R15: 0000000000000001
+[208284.801414] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[208284.805398] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95500407c98
+[208284.806612] ---[ end trace 3d3d39fbfadcb939 ]---
+[208284.807806] Fixing recursive fault but reboot is needed!
+[208368.055302] general protection fault: 0000 [#8] SMP PTI
+[208368.058108] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208368.079412] CPU: 1 PID: 15079 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208368.082816] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208368.085784] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208368.087247] RSP: 0018:ffffa95500d07df8 EFLAGS: 00010206
+[208368.088900] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208368.090741] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208368.092614] RBP: ffffa95500d07e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[208368.094961] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[208368.096767] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208368.098534] FS:  00007f574aaf5900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208368.100245] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208368.102090] CR2: 00007f5744f5cfa0 CR3: 000000003e360005 CR4: 00000000000606e0
+[208368.103644] Call Trace:
+[208368.104511]  ? sock_alloc_inode+0x3b/0xc0
+[208368.105390]  sock_alloc_inode+0x3b/0xc0
+[208368.106289]  alloc_inode+0x20/0x90
+[208368.107043]  new_inode_pseudo+0x11/0x60
+[208368.108056]  sock_alloc+0x1c/0x80
+[208368.109351]  __sock_create+0x80/0x200
+[208368.110393]  SyS_socket+0x55/0x90
+[208368.111308]  do_syscall_64+0x73/0x130
+[208368.112111]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208368.113179] RIP: 0033:0x7f574896bec7
+[208368.114003] RSP: 002b:00007ffe1030efd8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208368.115675] RAX: ffffffffffffffda RBX: 0000560a72dd7d40 RCX: 00007f574896bec7
+[208368.117230] RDX: 0000000000000000 RSI: 0000000000080801 RDI: 0000000000000001
+[208368.119639] RBP: 0000000000000002 R08: 000000000000000e R09: 0000000000000004
+[208368.121225] R10: 0000000000000021 R11: 0000000000000246 R12: 0000560a72dd7e30
+[208368.122785] R13: 00007f5744d53b8a R14: 0000000000000000 R15: 0000560a72dc0930
+[208368.124306] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208368.129029] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95500d07df8
+[208368.130507] ---[ end trace 3d3d39fbfadcb93a ]---
+[208368.131801] general protection fault: 0000 [#9] SMP PTI
+[208368.133693] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208368.145481] CPU: 1 PID: 970 Comm: rs:main Q:Reg Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208368.147897] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208368.155067] RIP: 0010:__kmalloc+0xa1/0x220
+[208368.157498] RSP: 0018:ffffa95500537d28 EFLAGS: 00010206
+[208368.239773] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[208368.244369] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[208368.248245] RBP: ffffa95500537d58 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[208368.291530] R10: 0000000000000000 R11: 0000000000000000 R12: 14353c1a50d740d4
+[208368.295673] R13: 00000000014000c0 R14: 0000000000000037 R15: ffff94243e003800
+[208368.303104] FS:  00007f62de8e1700(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208368.309254] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208368.311515] CR2: 00007f5744f5cfa0 CR3: 000000003a7f8006 CR4: 00000000000606e0
+[208368.314902] Call Trace:
+[208368.315991]  ? inotify_handle_event+0x6d/0x150
+[208368.340705]  inotify_handle_event+0x6d/0x150
+[208368.342782]  fsnotify+0x183/0x4e0
+[208368.344551]  __fsnotify_parent+0xda/0x130
+[208368.346435]  vfs_write+0x14e/0x1a0
+[208368.347870]  SyS_write+0x5c/0xe0
+[208368.349276]  do_syscall_64+0x73/0x130
+[208368.351315]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208368.354276] RIP: 0033:0x7f62e1b952b7
+[208368.355787] RSP: 002b:00007f62de8e0830 EFLAGS: 00000293 ORIG_RAX: 0000000000000001
+[208368.361766] RAX: ffffffffffffffda RBX: 0000000000000008 RCX: 00007f62e1b952b7
+[208368.364334] RDX: 0000000000001000 RSI: 00007f62d401f1e0 RDI: 0000000000000008
+[208368.368507] RBP: 00007f62d401f1e0 R08: 0000000000000000 R09: 00007f62d401f260
+[208368.372008] R10: 00007f62d401e44c R11: 0000000000000293 R12: 0000000000001000
+[208368.375562] R13: 00007f62d401dd10 R14: 0000000000000000 R15: 0000556f33800b40
+[208368.378767] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[208368.383750] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95500537d28
+[208368.385155] ---[ end trace 3d3d39fbfadcb93b ]---
+[208596.137213] general protection fault: 0000 [#10] SMP PTI
+[208596.138594] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208596.147966] CPU: 1 PID: 24793 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208596.149767] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208596.151449] RIP: 0010:kmem_cache_alloc_node_trace+0xd7/0x1d0
+[208596.152677] RSP: 0018:ffffa955005afcd0 EFLAGS: 00010206
+[208596.153817] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208596.155340] RDX: 00000000001dc14e RSI: 00000000014080c0 RDI: 00000000000260a0
+[208596.156859] RBP: ffffa955005afd08 R08: ffff94243fd260a0 R09: ffff94243e003800
+[208596.159029] R10: 0000000000000000 R11: 0000000000000001 R12: 00000000014080c0
+[208596.160668] R13: 00000000ffffffff R14: ffff94243e003800 R15: 14353c1a50d740d4
+[208596.162167] FS:  00007f9eb9d85900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208596.164101] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208596.165259] CR2: 00007ffc4feb2eef CR3: 000000001349a003 CR4: 00000000000606e0
+[208596.166720] Call Trace:
+[208596.167299]  ? __get_vm_area_node+0x7f/0x140
+[208596.168204]  __get_vm_area_node+0x7f/0x140
+[208596.169074]  __vmalloc_node_range+0x69/0x270
+[208596.169993]  ? bpf_prog_alloc+0x4c/0xc0
+[208596.170881]  ? do_wp_page+0x93/0x4a0
+[208596.171660]  __vmalloc+0x34/0x40
+[208596.172376]  ? bpf_prog_alloc+0x4c/0xc0
+[208596.173198]  bpf_prog_alloc+0x4c/0xc0
+[208596.174004]  bpf_prog_create_from_user+0x5a/0x120
+[208596.174989]  ? hardlockup_detector_perf_cleanup+0xa0/0xa0
+[208596.176076]  do_seccomp+0x293/0x6d0
+[208596.176856]  ? security_task_prctl+0xff/0x1d0
+[208596.177785]  prctl_set_seccomp+0x24/0x50
+[208596.178934]  SyS_prctl+0x29d/0x5f0
+[208596.180011]  do_syscall_64+0x73/0x130
+[208596.181013]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208596.182322] RIP: 0033:0x7f9eb7bfb48a
+[208596.183259] RSP: 002b:00007ffc4feb0df8 EFLAGS: 00000246 ORIG_RAX: 000000000000009d
+[208596.185123] RAX: ffffffffffffffda RBX: 00007ffc4feb0e00 RCX: 00007f9eb7bfb48a
+[208596.186849] RDX: 00005651c7c99120 RSI: 0000000000000002 RDI: 0000000000000016
+[208596.188575] RBP: 00007ffc4feb0e80 R08: 0000000000000000 R09: 0000000000000005
+[208596.190446] R10: 00007f9eb7bfb48a R11: 0000000000000246 R12: 00005651c93023d0
+[208596.192237] R13: 0000000000000000 R14: 00005651c93019a0 R15: 0000000000000000
+[208596.193936] Code: 74 5f 49 63 51 1c 31 f6 4c 89 ff 4c 89 4d d0 e8 c0 cf 75 00 4c 8b 4d d0 eb 47 49 63 59 20 49 8b 39 48 8d 4a 01 4c 89 f8 4c 01 fb <48> 33 1b 49 33 99 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 0f 
+[208596.197591] RIP: kmem_cache_alloc_node_trace+0xd7/0x1d0 RSP: ffffa955005afcd0
+[208596.199168] ---[ end trace 3d3d39fbfadcb93c ]---
+[208754.294938] general protection fault: 0000 [#11] SMP PTI
+[208754.296173] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208754.306721] CPU: 1 PID: 24795 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208754.309275] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208754.311463] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208754.312559] RSP: 0018:ffffa95501aa7bc0 EFLAGS: 00010206
+[208754.313702] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208754.315386] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208754.317351] RBP: ffffa95501aa7bf8 R08: ffff94243fd260a0 R09: 0000000000000000
+[208754.318859] R10: 0000000000000000 R11: ffff94243c7dacc0 R12: 00000000014000c0
+[208754.320603] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208754.322044] FS:  00007f5272828900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208754.324768] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208754.325938] CR2: 00007f52705fae30 CR3: 000000003baba005 CR4: 00000000000606e0
+[208754.327370] Call Trace:
+[208754.328002]  ? proc_reg_open+0x32/0x130
+[208754.329114]  proc_reg_open+0x32/0x130
+[208754.330192]  do_dentry_open+0x21d/0x370
+[208754.331007]  ? __inode_permission+0x5b/0x160
+[208754.332691]  ? proc_get_link+0x50/0x50
+[208754.333548]  vfs_open+0x4f/0x80
+[208754.334269]  path_openat+0x6c8/0x1960
+[208754.335125]  ? page_add_file_rmap+0x5b/0x180
+[208754.336046]  do_filp_open+0x9b/0x110
+[208754.336838]  ? __check_object_size+0xc8/0x1b0
+[208754.337764]  ? __alloc_fd+0xb2/0x170
+[208754.338554]  do_sys_open+0x1bb/0x2c0
+[208754.339673]  ? do_sys_open+0x1bb/0x2c0
+[208754.341042]  SyS_openat+0x14/0x20
+[208754.341981]  do_syscall_64+0x73/0x130
+[208754.342835]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208754.343944] RIP: 0033:0x7f527068bc8e
+[208754.344715] RSP: 002b:00007ffe4a6a5600 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[208754.346361] RAX: ffffffffffffffda RBX: 0000556206566290 RCX: 00007f527068bc8e
+[208754.348718] RDX: 0000000000080000 RSI: 00007f5271dcec47 RDI: 00000000ffffff9c
+[208754.350287] RBP: 00007f5271dced16 R08: 0000000000000000 R09: 00007f5271dced18
+[208754.351847] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000008
+[208754.353398] R13: 00007f5271dced16 R14: 00007f5271fd5ce8 R15: 00007f5272843170
+[208754.354896] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208754.359326] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501aa7bc0
+[208754.360688] ---[ end trace 3d3d39fbfadcb93d ]---
+[208795.881908] general protection fault: 0000 [#12] SMP PTI
+[208795.883865] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208795.898847] CPU: 1 PID: 24797 Comm: (md-udevd) Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208795.901311] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208795.903758] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208795.905015] RSP: 0018:ffffa95501a97df8 EFLAGS: 00010206
+[208795.906372] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208795.908091] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208795.909756] RBP: ffffa95501a97e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[208795.911343] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[208795.912956] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208795.914515] FS:  00007fc23fe29e00(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208795.916194] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208795.917389] CR2: 000055e2f7145606 CR3: 000000003baba004 CR4: 00000000000606e0
+[208795.918922] Call Trace:
+[208795.919525]  ? sock_alloc_inode+0x3b/0xc0
+[208795.920519]  sock_alloc_inode+0x3b/0xc0
+[208795.921434]  alloc_inode+0x20/0x90
+[208795.922241]  new_inode_pseudo+0x11/0x60
+[208795.923180]  sock_alloc+0x1c/0x80
+[208795.923942]  __sock_create+0x80/0x200
+[208795.924758]  SyS_socket+0x55/0x90
+[208795.925684]  do_syscall_64+0x73/0x130
+[208795.926566]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208795.927697] RIP: 0033:0x7fc23f94dec7
+[208795.928492] RSP: 002b:00007ffcfe1504c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208795.930095] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007fc23f94dec7
+[208795.931559] RDX: 0000000000000000 RSI: 0000000000000001 RDI: 0000000000000001
+[208795.933090] RBP: 0000000000000007 R08: 00000000ffffffff R09: 00007ffcfe150a14
+[208795.934663] R10: 0000000000000000 R11: 0000000000000246 R12: 000055e2f88448a8
+[208795.936139] R13: 00000000ffffffff R14: 000055e2f88448a8 R15: 000055e2f8844420
+[208795.937763] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208795.941939] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501a97df8
+[208795.943334] ---[ end trace 3d3d39fbfadcb93e ]---
+[208795.946590] general protection fault: 0000 [#13] SMP PTI
+[208795.947760] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208795.957321] CPU: 1 PID: 24798 Comm: (md-udevd) Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208795.959260] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208795.960926] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208795.962128] RSP: 0018:ffffa95501aafdf8 EFLAGS: 00010206
+[208795.963816] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208795.965397] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208795.966894] RBP: ffffa95501aafe30 R08: ffff94243fd260a0 R09: 0000000180170017
+[208795.968403] R10: ffffa95501aafde8 R11: 0000000000000000 R12: 00000000014000c0
+[208795.969974] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208795.971495] FS:  00007fc23fe29e00(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208795.973103] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208795.974287] CR2: 000055e2f7145606 CR3: 00000000361be005 CR4: 00000000000606e0
+[208795.975735] Call Trace:
+[208795.976319]  ? sock_alloc_inode+0x3b/0xc0
+[208795.977165]  sock_alloc_inode+0x3b/0xc0
+[208795.978074]  alloc_inode+0x20/0x90
+[208795.978890]  new_inode_pseudo+0x11/0x60
+[208795.979709]  sock_alloc+0x1c/0x80
+[208795.980688]  __sock_create+0x80/0x200
+[208795.981815]  SyS_socket+0x55/0x90
+[208795.982551]  do_syscall_64+0x73/0x130
+[208795.983416]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208795.984453] RIP: 0033:0x7fc23f94dec7
+[208795.985234] RSP: 002b:00007ffcfe1504c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208795.986763] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007fc23f94dec7
+[208795.988210] RDX: 0000000000000000 RSI: 0000000000000001 RDI: 0000000000000001
+[208795.989741] RBP: 0000000000000007 R08: 00000000ffffffff R09: 00007ffcfe150a14
+[208795.991275] R10: 0000000000000000 R11: 0000000000000246 R12: 000055e2f88448a8
+[208795.992747] R13: 00000000ffffffff R14: 000055e2f88448a8 R15: 000055e2f8844420
+[208795.994215] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208795.997799] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501aafdf8
+[208795.999183] ---[ end trace 3d3d39fbfadcb93f ]---
+[208796.002025] general protection fault: 0000 [#14] SMP PTI
+[208796.003179] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208796.012211] CPU: 1 PID: 24801 Comm: (md-udevd) Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208796.014225] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208796.015862] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208796.016922] RSP: 0018:ffffa95501ab7df8 EFLAGS: 00010206
+[208796.018008] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208796.019449] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208796.020985] RBP: ffffa95501ab7e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[208796.022621] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[208796.024148] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208796.025651] FS:  00007fc23fe29e00(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208796.027290] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208796.028458] CR2: 000055e2f7145606 CR3: 000000003baba006 CR4: 00000000000606e0
+[208796.030087] Call Trace:
+[208796.030682]  ? sock_alloc_inode+0x3b/0xc0
+[208796.031606]  sock_alloc_inode+0x3b/0xc0
+[208796.032456]  alloc_inode+0x20/0x90
+[208796.033223]  new_inode_pseudo+0x11/0x60
+[208796.034081]  sock_alloc+0x1c/0x80
+[208796.034824]  __sock_create+0x80/0x200
+[208796.035632]  SyS_socket+0x55/0x90
+[208796.036376]  do_syscall_64+0x73/0x130
+[208796.037178]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208796.038273] RIP: 0033:0x7fc23f94dec7
+[208796.039060] RSP: 002b:00007ffcfe1504c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208796.040787] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007fc23f94dec7
+[208796.042356] RDX: 0000000000000000 RSI: 0000000000000001 RDI: 0000000000000001
+[208796.043892] RBP: 0000000000000007 R08: 00000000ffffffff R09: 00007ffcfe150a14
+[208796.045495] R10: 0000000000000000 R11: 0000000000000246 R12: 000055e2f88448a8
+[208796.047117] R13: 00000000ffffffff R14: 000055e2f88448a8 R15: 000055e2f8844420
+[208796.048577] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208796.052574] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501ab7df8
+[208796.054188] ---[ end trace 3d3d39fbfadcb940 ]---
+[208796.057165] general protection fault: 0000 [#15] SMP PTI
+[208796.058769] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208796.068525] CPU: 1 PID: 24803 Comm: (md-udevd) Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208796.070509] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208796.072160] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208796.073224] RSP: 0018:ffffa95501abfdf8 EFLAGS: 00010206
+[208796.074292] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208796.075979] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208796.077513] RBP: ffffa95501abfe30 R08: ffff94243fd260a0 R09: 0000000000000000
+[208796.079156] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[208796.081127] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208796.082745] FS:  00007fc23fe29e00(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208796.084575] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208796.086068] CR2: 000055e2f7145606 CR3: 00000000361be002 CR4: 00000000000606e0
+[208796.087516] Call Trace:
+[208796.088107]  ? sock_alloc_inode+0x3b/0xc0
+[208796.088959]  sock_alloc_inode+0x3b/0xc0
+[208796.089887]  alloc_inode+0x20/0x90
+[208796.090884]  new_inode_pseudo+0x11/0x60
+[208796.091730]  sock_alloc+0x1c/0x80
+[208796.092603]  __sock_create+0x80/0x200
+[208796.093582]  SyS_socket+0x55/0x90
+[208796.094319]  do_syscall_64+0x73/0x130
+[208796.095131]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208796.096247] RIP: 0033:0x7fc23f94dec7
+[208796.097033] RSP: 002b:00007ffcfe1504c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208796.098724] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007fc23f94dec7
+[208796.100242] RDX: 0000000000000000 RSI: 0000000000000001 RDI: 0000000000000001
+[208796.101807] RBP: 0000000000000007 R08: 00000000ffffffff R09: 00007ffcfe150a14
+[208796.103296] R10: 0000000000000000 R11: 0000000000000246 R12: 000055e2f88448a8
+[208796.104752] R13: 00000000ffffffff R14: 000055e2f88448a8 R15: 000055e2f8844420
+[208796.106325] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208796.110259] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501abfdf8
+[208796.111661] ---[ end trace 3d3d39fbfadcb941 ]---
+[208796.114494] general protection fault: 0000 [#16] SMP PTI
+[208796.115622] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208796.125392] CPU: 1 PID: 24805 Comm: (md-udevd) Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208796.127565] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208796.129220] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208796.130354] RSP: 0018:ffffa95501ac7df8 EFLAGS: 00010206
+[208796.131512] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208796.133047] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208796.135036] RBP: ffffa95501ac7e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[208796.136559] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[208796.138122] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208796.140183] FS:  00007fc23fe29e00(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208796.142162] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208796.143403] CR2: 000055e2f7145606 CR3: 000000003baba003 CR4: 00000000000606e0
+[208796.144855] Call Trace:
+[208796.145461]  ? sock_alloc_inode+0x3b/0xc0
+[208796.146312]  sock_alloc_inode+0x3b/0xc0
+[208796.147141]  alloc_inode+0x20/0x90
+[208796.147892]  new_inode_pseudo+0x11/0x60
+[208796.148712]  sock_alloc+0x1c/0x80
+[208796.149488]  __sock_create+0x80/0x200
+[208796.150571]  SyS_socket+0x55/0x90
+[208796.151318]  do_syscall_64+0x73/0x130
+[208796.152199]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208796.153342] RIP: 0033:0x7fc23f94dec7
+[208796.154227] RSP: 002b:00007ffcfe1504c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[208796.155834] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007fc23f94dec7
+[208796.157296] RDX: 0000000000000000 RSI: 0000000000000001 RDI: 0000000000000001
+[208796.159201] RBP: 0000000000000007 R08: 00000000ffffffff R09: 00007ffcfe150a14
+[208796.160743] R10: 0000000000000000 R11: 0000000000000246 R12: 000055e2f88448a8
+[208796.162457] R13: 00000000ffffffff R14: 000055e2f88448a8 R15: 000055e2f8844420
+[208796.163931] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208796.168166] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501ac7df8
+[208796.169817] ---[ end trace 3d3d39fbfadcb942 ]---
+[208950.932584] general protection fault: 0000 [#17] SMP PTI
+[208950.934782] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[208950.944363] CPU: 1 PID: 24807 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[208950.946413] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[208950.948858] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[208950.950146] RSP: 0018:ffffa95501acfbc0 EFLAGS: 00010206
+[208950.951249] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[208950.952734] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[208950.954458] RBP: ffffa95501acfbf8 R08: ffff94243fd260a0 R09: 0000000000000000
+[208950.955935] R10: 0000000000000000 R11: 696c657300736d65 R12: 00000000014000c0
+[208950.957498] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[208950.958989] FS:  00007f49ae01f900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[208950.960803] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[208950.962178] CR2: 00007f49abdf1e30 CR3: 000000003bc94004 CR4: 00000000000606e0
+[208950.964250] Call Trace:
+[208950.964901]  ? proc_reg_open+0x32/0x130
+[208950.965789]  proc_reg_open+0x32/0x130
+[208950.966595]  do_dentry_open+0x21d/0x370
+[208950.967435]  ? __inode_permission+0x5b/0x160
+[208950.968355]  ? proc_get_link+0x50/0x50
+[208950.969245]  vfs_open+0x4f/0x80
+[208950.970143]  path_openat+0x6c8/0x1960
+[208950.970951]  ? page_add_file_rmap+0x5b/0x180
+[208950.971930]  ? alloc_set_pte+0x2b9/0x5f0
+[208950.972789]  do_filp_open+0x9b/0x110
+[208950.973754]  ? __check_object_size+0xc8/0x1b0
+[208950.974981]  ? __alloc_fd+0xb2/0x170
+[208950.975863]  do_sys_open+0x1bb/0x2c0
+[208950.976704]  ? do_sys_open+0x1bb/0x2c0
+[208950.977593]  SyS_openat+0x14/0x20
+[208950.978338]  do_syscall_64+0x73/0x130
+[208950.979131]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[208950.981571] RIP: 0033:0x7f49abe82c8e
+[208950.982360] RSP: 002b:00007ffc2d3f8040 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[208950.983900] RAX: ffffffffffffffda RBX: 000055f8a46f0290 RCX: 00007f49abe82c8e
+[208950.985348] RDX: 0000000000080000 RSI: 00007f49ad5c5c47 RDI: 00000000ffffff9c
+[208950.986807] RBP: 00007f49ad5c5d16 R08: 0000000000000000 R09: 00007f49ad5c5d18
+[208950.988251] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000008
+[208950.989712] R13: 00007f49ad5c5d16 R14: 00007f49ad7ccce8 R15: 00007f49ae03a170
+[208950.991244] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[208950.994949] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501acfbc0
+[208950.997508] ---[ end trace 3d3d39fbfadcb943 ]---
+[209169.829138] general protection fault: 0000 [#18] SMP PTI
+[209169.830628] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[209169.840200] CPU: 1 PID: 24809 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[209169.842005] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[209169.843737] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[209169.844812] RSP: 0018:ffffa95501ad7bc0 EFLAGS: 00010206
+[209169.845886] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[209169.847348] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[209169.848810] RBP: ffffa95501ad7bf8 R08: ffff94243fd260a0 R09: 0000000000000000
+[209169.850459] R10: 0000000000000000 R11: 696c657300736d65 R12: 00000000014000c0
+[209169.851924] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[209169.853657] FS:  00007faebb003900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[209169.855302] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[209169.856467] CR2: 00007faeb8dd5e30 CR3: 000000003baba006 CR4: 00000000000606e0
+[209169.857921] Call Trace:
+[209169.858512]  ? proc_reg_open+0x32/0x130
+[209169.859361]  proc_reg_open+0x32/0x130
+[209169.860166]  do_dentry_open+0x21d/0x370
+[209169.860999]  ? __inode_permission+0x5b/0x160
+[209169.861973]  ? proc_get_link+0x50/0x50
+[209169.862877]  vfs_open+0x4f/0x80
+[209169.863583]  path_openat+0x6c8/0x1960
+[209169.864373]  ? page_add_file_rmap+0x5b/0x180
+[209169.865271]  ? alloc_set_pte+0x2b9/0x5f0
+[209169.866111]  do_filp_open+0x9b/0x110
+[209169.866895]  ? __check_object_size+0xc8/0x1b0
+[209169.867878]  ? __alloc_fd+0xb2/0x170
+[209169.868660]  do_sys_open+0x1bb/0x2c0
+[209169.869437]  ? do_sys_open+0x1bb/0x2c0
+[209169.870389]  SyS_openat+0x14/0x20
+[209169.871138]  do_syscall_64+0x73/0x130
+[209169.872077]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[209169.873144] RIP: 0033:0x7faeb8e66c8e
+[209169.873998] RSP: 002b:00007ffc31c61ed0 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[209169.875670] RAX: ffffffffffffffda RBX: 000056047f289290 RCX: 00007faeb8e66c8e
+[209169.877201] RDX: 0000000000080000 RSI: 00007faeba5a9c47 RDI: 00000000ffffff9c
+[209169.878659] RBP: 00007faeba5a9d16 R08: 0000000000000000 R09: 00007faeba5a9d18
+[209169.880165] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000008
+[209169.881690] R13: 00007faeba5a9d16 R14: 00007faeba7b0ce8 R15: 00007faebb01e170
+[209169.883228] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[209169.886913] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501ad7bc0
+[209169.888314] ---[ end trace 3d3d39fbfadcb944 ]---
+[209641.259704] general protection fault: 0000 [#19] SMP PTI
+[209641.261018] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[209641.271823] CPU: 1 PID: 24812 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[209641.273673] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[209641.275350] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[209641.276410] RSP: 0018:ffffa95501ae7bc0 EFLAGS: 00010206
+[209641.277497] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[209641.279606] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[209641.281714] RBP: ffffa95501ae7bf8 R08: ffff94243fd260a0 R09: 0000000000000000
+[209641.283567] R10: 0000000000000000 R11: 696c657300736d65 R12: 00000000014000c0
+[209641.285020] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[209641.286469] FS:  00007f17de277900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[209641.288092] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[209641.289258] CR2: 00007f17dc049e30 CR3: 000000003bc94002 CR4: 00000000000606e0
+[209641.290810] Call Trace:
+[209641.291401]  ? proc_reg_open+0x32/0x130
+[209641.292239]  proc_reg_open+0x32/0x130
+[209641.293125]  do_dentry_open+0x21d/0x370
+[209641.293970]  ? __inode_permission+0x5b/0x160
+[209641.294887]  ? proc_get_link+0x50/0x50
+[209641.295855]  vfs_open+0x4f/0x80
+[209641.296557]  path_openat+0x6c8/0x1960
+[209641.297350]  ? page_add_file_rmap+0x5b/0x180
+[209641.298250]  ? alloc_set_pte+0x2b9/0x5f0
+[209641.299093]  do_filp_open+0x9b/0x110
+[209641.299878]  ? __check_object_size+0xc8/0x1b0
+[209641.300916]  ? __alloc_fd+0xb2/0x170
+[209641.302123]  do_sys_open+0x1bb/0x2c0
+[209641.303274]  ? do_sys_open+0x1bb/0x2c0
+[209641.306572]  SyS_openat+0x14/0x20
+[209641.307518]  do_syscall_64+0x73/0x130
+[209641.308770]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[209641.310697] RIP: 0033:0x7f17dc0dac8e
+[209641.311937] RSP: 002b:00007fff719cbd80 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[209641.314119] RAX: ffffffffffffffda RBX: 000055cc74f59290 RCX: 00007f17dc0dac8e
+[209641.315693] RDX: 0000000000080000 RSI: 00007f17dd81dc47 RDI: 00000000ffffff9c
+[209641.317327] RBP: 00007f17dd81dd16 R08: 0000000000000000 R09: 00007f17dd81dd18
+[209641.318940] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000008
+[209641.320455] R13: 00007f17dd81dd16 R14: 00007f17dda24ce8 R15: 00007f17de292170
+[209641.321954] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[209641.325935] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501ae7bc0
+[209641.327766] ---[ end trace 3d3d39fbfadcb945 ]---
+[210260.858787] general protection fault: 0000 [#20] SMP PTI
+[210260.860460] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[210260.873275] CPU: 1 PID: 24815 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[210260.875431] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[210260.877377] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[210260.878625] RSP: 0018:ffffa95501aefbc0 EFLAGS: 00010206
+[210260.879731] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[210260.881286] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[210260.882783] RBP: ffffa95501aefbf8 R08: ffff94243fd260a0 R09: 0000000000000000
+[210260.884934] R10: 0000000000000000 R11: 696c657300736d65 R12: 00000000014000c0
+[210260.887402] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[210260.888885] FS:  00007fd113efb900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[210260.890699] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[210260.892287] CR2: 00007fd111cddb50 CR3: 000000003baba004 CR4: 00000000000606e0
+[210260.894496] Call Trace:
+[210260.895103]  ? proc_reg_open+0x32/0x130
+[210260.896063]  proc_reg_open+0x32/0x130
+[210260.896871]  do_dentry_open+0x21d/0x370
+[210260.897727]  ? __inode_permission+0x5b/0x160
+[210260.898808]  ? proc_get_link+0x50/0x50
+[210260.899650]  vfs_open+0x4f/0x80
+[210260.900590]  path_openat+0x6c8/0x1960
+[210260.901984]  ? page_add_file_rmap+0x5b/0x180
+[210260.902906]  ? alloc_set_pte+0x2b9/0x5f0
+[210260.903767]  do_filp_open+0x9b/0x110
+[210260.904748]  ? __check_object_size+0xc8/0x1b0
+[210260.905758]  ? __alloc_fd+0xb2/0x170
+[210260.906547]  do_sys_open+0x1bb/0x2c0
+[210260.907333]  ? do_sys_open+0x1bb/0x2c0
+[210260.908145]  SyS_openat+0x14/0x20
+[210260.909124]  do_syscall_64+0x73/0x130
+[210260.910786]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[210260.912008] RIP: 0033:0x7fd111d5ec8e
+[210260.912797] RSP: 002b:00007ffc38633720 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[210260.915502] RAX: ffffffffffffffda RBX: 000055652765e290 RCX: 00007fd111d5ec8e
+[210260.918158] RDX: 0000000000080000 RSI: 00007fd1134a1c47 RDI: 00000000ffffff9c
+[210260.919656] RBP: 00007fd1134a1d16 R08: 0000000000000000 R09: 00007fd1134a1d18
+[210260.921315] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000008
+[210260.922789] R13: 00007fd1134a1d16 R14: 00007fd1136a8ce8 R15: 00007fd113f16170
+[210260.924225] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[210260.927997] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501aefbc0
+[210260.929394] ---[ end trace 3d3d39fbfadcb946 ]---
+[210892.104439] general protection fault: 0000 [#21] SMP PTI
+[210892.107046] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[210892.123602] CPU: 1 PID: 24818 Comm: sshd Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[210892.126587] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[210892.128756] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[210892.130641] RSP: 0018:ffffa95501affbc0 EFLAGS: 00010206
+[210892.131845] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[210892.133382] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[210892.135179] RBP: ffffa95501affbf8 R08: ffff94243fd260a0 R09: 0000000000000000
+[210892.136758] R10: 0000000000000000 R11: 696c657300736d65 R12: 00000000014000c0
+[210892.138266] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[210892.139762] FS:  00007f7e49a80900(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[210892.141696] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[210892.142956] CR2: 00007f7e47852e30 CR3: 000000003bc94002 CR4: 00000000000606e0
+[210892.146470] Call Trace:
+[210892.147891]  ? proc_reg_open+0x32/0x130
+[210892.149005]  proc_reg_open+0x32/0x130
+[210892.149844]  do_dentry_open+0x21d/0x370
+[210892.150999]  ? __inode_permission+0x5b/0x160
+[210892.151983]  ? proc_get_link+0x50/0x50
+[210892.152920]  vfs_open+0x4f/0x80
+[210892.153684]  path_openat+0x6c8/0x1960
+[210892.154563]  ? page_add_file_rmap+0x5b/0x180
+[210892.155534]  ? alloc_set_pte+0x2b9/0x5f0
+[210892.156604]  do_filp_open+0x9b/0x110
+[210892.157584]  ? __check_object_size+0xc8/0x1b0
+[210892.158978]  ? __alloc_fd+0xb2/0x170
+[210892.160286]  do_sys_open+0x1bb/0x2c0
+[210892.161480]  ? do_sys_open+0x1bb/0x2c0
+[210892.162296]  SyS_openat+0x14/0x20
+[210892.163022]  do_syscall_64+0x73/0x130
+[210892.163873]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[210892.165068] RIP: 0033:0x7f7e478e3c8e
+[210892.166321] RSP: 002b:00007fffdcbb6040 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[210892.167909] RAX: ffffffffffffffda RBX: 0000556fc6a70290 RCX: 00007f7e478e3c8e
+[210892.169363] RDX: 0000000000080000 RSI: 00007f7e49026c47 RDI: 00000000ffffff9c
+[210892.170853] RBP: 00007f7e49026d16 R08: 0000000000000000 R09: 00007f7e49026d18
+[210892.172322] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000008
+[210892.173853] R13: 00007f7e49026d16 R14: 00007f7e4922dce8 R15: 00007f7e49a9b170
+[210892.176538] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[210892.180560] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501affbc0
+[210892.182124] ---[ end trace 3d3d39fbfadcb947 ]---
+[211028.716998] general protection fault: 0000 [#22] SMP PTI
+[211028.719779] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[211028.735402] CPU: 1 PID: 24821 Comm: cron Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[211028.737910] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[211028.739929] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[211028.742155] RSP: 0018:ffffa95501b07df8 EFLAGS: 00010206
+[211028.743416] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[211028.745116] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[211028.746837] RBP: ffffa95501b07e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[211028.748430] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[211028.750154] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[211028.751703] FS:  00007fa799193840(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[211028.753480] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[211028.754753] CR2: 00007fa798b46a80 CR3: 000000003baba005 CR4: 00000000000606e0
+[211028.756301] Call Trace:
+[211028.757074]  ? sock_alloc_inode+0x3b/0xc0
+[211028.759530]  sock_alloc_inode+0x3b/0xc0
+[211028.760896]  alloc_inode+0x20/0x90
+[211028.761888]  new_inode_pseudo+0x11/0x60
+[211028.762766]  sock_alloc+0x1c/0x80
+[211028.763559]  __sock_create+0x80/0x200
+[211028.764386]  SyS_socket+0x55/0x90
+[211028.765201]  do_syscall_64+0x73/0x130
+[211028.766136]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[211028.767258] RIP: 0033:0x7fa798878ec7
+[211028.768057] RSP: 002b:00007ffcc53453e8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[211028.769763] RAX: ffffffffffffffda RBX: fffffffffffffe98 RCX: 00007fa798878ec7
+[211028.771401] RDX: 0000000000000000 RSI: 0000000000080801 RDI: 0000000000000001
+[211028.772860] RBP: 00007ffcc53454e0 R08: 0000000000000001 R09: 0000000000000000
+[211028.775365] R10: 0000000000000006 R11: 0000000000000246 R12: 000000000000000c
+[211028.776826] R13: 00007fa79890d067 R14: 0000000000000006 R15: 000000000000000c
+[211028.778516] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[211028.783067] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501b07df8
+[211028.784469] ---[ end trace 3d3d39fbfadcb948 ]---
+[211817.085864] general protection fault: 0000 [#23] SMP PTI
+[211817.088150] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[211817.118165] CPU: 1 PID: 1100 Comm: vminfo Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[211817.122087] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[211817.125549] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[211817.128652] RSP: 0018:ffffa95500613df8 EFLAGS: 00010206
+[211817.136288] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[211817.138448] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[211817.140535] RBP: ffffa95500613e30 R08: ffff94243fd260a0 R09: 0000000000000000
+[211817.143532] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[211817.145902] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[211817.152678] FS:  00007f77ef0bc700(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[211817.154813] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[211817.156219] CR2: 00005636a3b7b008 CR3: 000000003a5d0004 CR4: 00000000000606e0
+[211817.158823] Call Trace:
+[211817.159541]  ? sock_alloc_inode+0x3b/0xc0
+[211817.160832]  sock_alloc_inode+0x3b/0xc0
+[211817.162303]  alloc_inode+0x20/0x90
+[211817.170529]  new_inode_pseudo+0x11/0x60
+[211817.171681]  sock_alloc+0x1c/0x80
+[211817.173021]  __sock_create+0x80/0x200
+[211817.174239]  SyS_socket+0x55/0x90
+[211817.175056]  ? exit_to_usermode_loop+0x94/0xd0
+[211817.176193]  do_syscall_64+0x73/0x130
+[211817.177081]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[211817.178415] RIP: 0033:0x7f77f02e3ec7
+[211817.180100] RSP: 002b:00007f77ef0bbc08 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[211817.189591] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007f77f02e3ec7
+[211817.192074] RDX: 0000000000000000 RSI: 0000000000000002 RDI: 0000000000000002
+[211817.195180] RBP: 00007f77ef0bbde0 R08: 000000000000005f R09: 00007f77ef0bbb08
+[211817.202435] R10: 00007f77ef0bb0c1 R11: 0000000000000246 R12: 00007f77e0008020
+[211817.204468] R13: 00007f77ef0bbc70 R14: 0000000000000001 R15: 0000000000000001
+[211817.207061] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[211817.213559] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95500613df8
+[211817.220465] ---[ end trace 3d3d39fbfadcb949 ]---
+[212887.805800] general protection fault: 0000 [#24] SMP PTI
+[212887.811996] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[212887.832583] CPU: 1 PID: 24826 Comm: (otd-news) Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[212887.835131] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[212887.838047] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[212887.841085] RSP: 0018:ffffa95501a4fdf8 EFLAGS: 00010206
+[212887.842631] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[212887.844523] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[212887.846236] RBP: ffffa95501a4fe30 R08: ffff94243fd260a0 R09: 0000000000000000
+[212887.848662] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000014000c0
+[212887.850434] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[212887.852000] FS:  00007fc23fe29e00(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[212887.853996] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[212887.858521] CR2: 000055e2f7145606 CR3: 000000003baba003 CR4: 00000000000606e0
+[212887.861780] Call Trace:
+[212887.862910]  ? sock_alloc_inode+0x3b/0xc0
+[212887.864253]  sock_alloc_inode+0x3b/0xc0
+[212887.865377]  alloc_inode+0x20/0x90
+[212887.866150]  new_inode_pseudo+0x11/0x60
+[212887.867004]  sock_alloc+0x1c/0x80
+[212887.867754]  __sock_create+0x80/0x200
+[212887.868623]  SyS_socket+0x55/0x90
+[212887.869385]  do_syscall_64+0x73/0x130
+[212887.870471]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[212887.872575] RIP: 0033:0x7fc23f94dec7
+[212887.875129] RSP: 002b:00007ffcfe1504c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000029
+[212887.877425] RAX: ffffffffffffffda RBX: 0000000000000001 RCX: 00007fc23f94dec7
+[212887.880013] RDX: 0000000000000000 RSI: 0000000000000001 RDI: 0000000000000001
+[212887.882185] RBP: 0000000000000007 R08: 00000000ffffffff R09: 00007ffcfe150a14
+[212887.884088] R10: 0000000000000000 R11: 0000000000000246 R12: 000055e2f8868f58
+[212887.886453] R13: 00000000ffffffff R14: 000055e2f8868f58 R15: 000055e2f8868ad0
+[212887.888348] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[212887.895277] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501a4fdf8
+[212887.896959] ---[ end trace 3d3d39fbfadcb94a ]---
+[212887.898649] general protection fault: 0000 [#25] SMP PTI
+[212887.901040] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[212887.915590] CPU: 1 PID: 19097 Comm: kworker/1:1 Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[212887.918692] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[212887.921499] Workqueue: events kernfs_notify_workfn
+[212887.924397] RIP: 0010:__kmalloc+0xa1/0x220
+[212887.927003] RSP: 0018:ffffa95503a9bd30 EFLAGS: 00010206
+[212887.928123] RAX: 14353c1a50d740d4 RBX: 0000000000000000 RCX: 00000000001dc14f
+[212887.933106] RDX: 00000000001dc14e RSI: 0000000000000000 RDI: 00000000000260a0
+[212887.934803] RBP: ffffa95503a9bd60 R08: 14353c1a50d740d4 R09: ffff94243e003800
+[212887.936378] R10: 0000000000000040 R11: 0000000000000000 R12: 14353c1a50d740d4
+[212887.946658] R13: 00000000014000c0 R14: 000000000000003e R15: ffff94243e003800
+[212887.949284] FS:  0000000000000000(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[212887.951451] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[212887.954399] CR2: 000055e2f7145606 CR3: 000000000500a001 CR4: 00000000000606e0
+[212887.957336] Call Trace:
+[212887.959034]  ? inotify_handle_event+0x6d/0x150
+[212887.960246]  inotify_handle_event+0x6d/0x150
+[212887.961594]  fsnotify+0x183/0x4e0
+[212887.962576]  kernfs_notify_workfn+0x14e/0x1c0
+[212887.964618]  process_one_work+0x1de/0x420
+[212887.965733]  worker_thread+0x32/0x410
+[212887.966696]  kthread+0x121/0x140
+[212887.967547]  ? process_one_work+0x420/0x420
+[212887.968618]  ? kthread_create_worker_on_cpu+0x70/0x70
+[212887.969970]  ret_from_fork+0x35/0x40
+[212887.970873] Code: d8 5b 5d 49 83 78 10 00 4d 8b 20 0f 84 19 01 00 00 4d 85 e4 0f 84 10 01 00 00 4d 63 41 20 49 8b 39 48 8d 4a 01 4c 89 e0 4d 01 e0 <4d> 8b 18 4d 33 99 40 01 00 00 4c 89 c3 4c 31 db 65 48 0f c7 0f 
+[212887.977451] RIP: __kmalloc+0xa1/0x220 RSP: ffffa95503a9bd30
+[212887.979115] ---[ end trace 3d3d39fbfadcb94b ]---
+[212887.980338] general protection fault: 0000 [#26] SMP PTI
+[212887.981760] Modules linked in: ufs msdos xfs vboxsf isofs input_leds serio_raw video vboxguest sch_fq_codel ib_iser rdma_cm iw_cm ib_cm ib_core iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi ip_tables x_tables autofs4 btrfs zstd_compress raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c raid1 raid0 multipath linear crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc mptspi scsi_transport_spi aesni_intel mptscsih aes_x86_64 crypto_simd glue_helper cryptd psmouse mptbase e1000
+[212887.996928] CPU: 1 PID: 23114 Comm: kworker/1:0 Tainted: G      D W        4.15.0-74-generic #84-Ubuntu
+[212887.999465] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[212888.001631] RIP: 0010:kmem_cache_alloc_trace+0x85/0x1b0
+[212888.003041] RSP: 0018:ffffa95501febd50 EFLAGS: 00010206
+[212888.007179] RAX: 14353c1a50d740d4 RBX: 14353c1a50d740d4 RCX: 00000000001dc14f
+[212888.011316] RDX: 00000000001dc14e RSI: 00000000014000c0 RDI: 00000000000260a0
+[212888.013472] RBP: ffffa95501febd88 R08: ffff94243fd260a0 R09: ffffa95501febe83
+[212888.016051] R10: ffffa95501febe80 R11: ffffa95501febe83 R12: 00000000014000c0
+[212888.020447] R13: ffff94243e003800 R14: 14353c1a50d740d4 R15: ffff94243e003800
+[212888.024624] FS:  0000000000000000(0000) GS:ffff94243fd00000(0000) knlGS:0000000000000000
+[212888.028375] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[212888.031080] CR2: 00000000000000b0 CR3: 000000000500a001 CR4: 00000000000606e0
+[212888.033554] Call Trace:
+[212888.034398]  ? __kthread_create_on_node+0x71/0x1c0
+[212888.035751]  ? process_one_work+0x420/0x420
+[212888.036845]  __kthread_create_on_node+0x71/0x1c0
+[212888.039588]  kthread_create_on_node+0x46/0x70
+[212888.041654]  create_worker+0xc6/0x1b0
+[212888.043270]  worker_thread+0x324/0x410
+[212888.044793]  kthread+0x121/0x140
+[212888.046021]  ? process_one_work+0x420/0x420
+[212888.047338]  ? kthread_create_worker_on_cpu+0x70/0x70
+[212888.048807]  ret_from_fork+0x35/0x40
+[212888.050799] Code: f1 5b 5d 49 83 78 10 00 4d 8b 30 0f 84 f2 00 00 00 4d 85 f6 0f 84 e9 00 00 00 49 63 5f 20 49 8b 3f 48 8d 4a 01 4c 89 f0 4c 01 f3 <48> 33 1b 49 33 9f 40 01 00 00 65 48 0f c7 0f 0f 94 c0 84 c0 74 
+[212888.058060] RIP: kmem_cache_alloc_trace+0x85/0x1b0 RSP: ffffa95501febd50
+[212888.060893] ---[ end trace 3d3d39fbfadcb94c ]---
